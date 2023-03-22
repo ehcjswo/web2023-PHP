@@ -9,6 +9,6 @@
   if(mysqli_connect_errno()){
     echo "Database Connect False!";
   } else {
-    echo "Database Connect True!";
+    echo "Database Connect True!git ";
   }
 ?>
