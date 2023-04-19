@@ -1,3 +1,12 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+
+    echo "<pre>";
+    var_dump($_SESSION);
+    echo "</pre>";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -30,10 +39,11 @@
             
         </div>
         <!-- 
-            <div class="intro__inner"></div>  //각페이지 소개 배너
-            <div class="join__inner"></div>  
-            <div class="sliders__inner"></div>  
+            <div class="intro__inner"></div>  각페이지 소개 배너
+            <div class="join__inner"></div>  회원가입 페이지
+            <div class="login__inner"></div>  로그인 페이지
             
+            <div class="sliders__inner"></div>           
             <div class="banners__inner"></div>  
             <div class="cards__inner"></div>
             <div class="images__inner"></div>

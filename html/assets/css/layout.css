@@ -57,6 +57,9 @@
     top: 18px;
     z-index: 10;
 }
+.header__inner .right li {
+    display: inline-block;
+}
 .header__inner .right a {
     font-size: 0.88rem;
     border: 1px solid var(--color__black);
@@ -71,6 +74,10 @@
 }
 
 /* nav__inner */
+#header {
+    position: relative;
+}
+
 .nav__inner {
     position: absolute;
     left: 50%;

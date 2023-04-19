@@ -29,7 +29,8 @@
     padding: 0 10%;
 } 
 .intro__btn {
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 .intro__btn a {
     font-size: 1.4em;
