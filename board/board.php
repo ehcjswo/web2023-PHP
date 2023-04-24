@@ -2,9 +2,6 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
-    echo "<pre>";
-    var_dump($_SESSION);
-    echo "</pre>";
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 블로그 만들기</title>
+    <title>게시판</title>
 
     <?php include "../include/head.php" ?>
 </head>

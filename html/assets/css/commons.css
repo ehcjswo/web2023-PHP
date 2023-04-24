@@ -16,13 +16,18 @@
     left: 0;
 }
 
-/* bg */
+/* color Style */
 .gray {
     background-color: var(--bg__gray);
 }
 .black {
     background-color: var(--bg__black);
 }
+.white {
+    background-color: var(--color__white) !important;
+    color: var(--color__black) !important;
+}
+
 
 
 /* font */
@@ -88,7 +93,22 @@ body.windows {
     border-radius: 5px;
     padding: 0.5em;
 }
-.btnStyle3{
+
+/* 기본버튼 스타일 */
+.btnStyle3 {
+    display: inline-block;
+    padding: 0.5em;
+    background-color: var(--bg__black);
+    color: var(--color__white);
+    width: 90px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+/* .btnStyle3{
     display: inline-block;
     width: 5em;
     font-size: 1.2em;
@@ -105,7 +125,7 @@ body.windows {
     color: var(--color__black);
     border-radius: 5px;
     padding: 0.5em;
-}
+} */
 
 /* 간격설정 */
 .mt10 {margin-top: 10px !important;}
@@ -121,13 +141,19 @@ body.windows {
 .mb30 {margin-bottom: 30px !important;}
 .mb40 {margin-bottom: 40px !important;}
 .mb50 {margin-bottom: 50px !important;}
-.mb60 {margin-bottom: 70px !important;}
-.mb70 {margin-bottom: 60px !important;}
+.mb60 {margin-bottom: 60px !important;}
+.mb70 {margin-bottom: 70px !important;}
+.mb80 {margin-bottom: 80px !important;}
+.mb90 {margin-bottom: 90px !important;}
+.mb100 {margin-bottom: 100px !important;}
+
+
+
 
 
 /* input style */
 .inputStyle {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     width: 100%;
     border-radius: 5px;
     padding: 1em 2em;

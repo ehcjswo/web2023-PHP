@@ -5,6 +5,10 @@
     justify-content: space-between;
     padding: 3rem 0;
 }
+.intro__inner h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
 .intro__inner.center {
     flex-direction: column;
 }
@@ -13,6 +17,7 @@
 .intro__images {
     width: 27%;
 }
+
 .intro__text {
     width: 70%;
     font-size: 1.6rem;
@@ -24,9 +29,13 @@
     max-width: 300px;
     margin-bottom: 3%;
 } 
+.intro__inner .intro__images.small {
+    width: 20%;
+    max-width: 200px;
+
+}
 .intro__inner.center .intro__text {
     text-align: center;
-    padding: 0 10%;
 } 
 .intro__btn {
     margin-top: 30px;

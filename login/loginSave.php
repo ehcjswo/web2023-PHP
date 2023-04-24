@@ -64,5 +64,7 @@
         <!-- //intro__inner  -->
     </main>
     <!-- //main -->
+    <?php include "../include/footer.php" ?>
+    <!-- //footer -->
 </body>
 </html>
