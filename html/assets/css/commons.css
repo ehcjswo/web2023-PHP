@@ -88,6 +88,24 @@ body.windows {
     border-radius: 5px;
     padding: 0.5em;
 }
+.btnStyle3{
+    display: inline-block;
+    width: 5em;
+    font-size: 1.2em;
+    background-color: var(--bg__black);
+    color: var(--color__white);
+    border-radius: 5px;
+    padding: 0.5em;
+}
+.btnStyle4{
+    display: inline-block;
+    width: 5em;
+    font-size: 1.2em;
+    background-color: var(--bg__white);
+    color: var(--color__black);
+    border-radius: 5px;
+    padding: 0.5em;
+}
 
 /* 간격설정 */
 .mt10 {margin-top: 10px !important;}
