@@ -103,6 +103,8 @@
                 echo "<td>".$info['boardView']."</td>";
                 echo "</tr>";
             }
+        } else {
+            echo "<tr><td colspan='4'>게시글이 없습니다.</td></td>";
         }
     }
 ?>
