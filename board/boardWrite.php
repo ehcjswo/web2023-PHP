@@ -49,7 +49,7 @@
                                 <label for="boardContents">내용</label>
                                 <textarea name="boardContents" id="boardContents" class="inputStyle" rows="20"></textarea>
                             </div>
-                            <button type="submit" class="btnStyle3">저장하기</button>
+                            <button type="submit" class="btnStyle3">글쓰기</button>
                         </fieldset>
                     </form>
                 </div>
