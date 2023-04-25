@@ -7,7 +7,19 @@
     $boardView = 1;
     $regTime = time();
     $memberID = $_SESSION['memberID'];
+    
+    $boardTitle = $connect -> real_escape_tring($boardTitle);
+    $boardContents = $connect -> real_escape_tring($boardContents);
+    
+    
     $sql = "INSERT INTO board(memberID, boardTitle, boardContents, boardView, regTime) VALUES('$memberID', '$boardTitle', '$boardContents', '$boardView', '$regTime')";
     
     $connect -> query($sql);
+
+
+    
 ?>
+
+<script>
+    location.href = "board.php";
+</script>

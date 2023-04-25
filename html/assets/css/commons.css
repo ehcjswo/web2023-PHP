@@ -92,6 +92,7 @@ body.windows {
     color: var(--color__white);
     border-radius: 5px;
     padding: 0.5em;
+    cursor: pointer;
 }
 
 /* 기본버튼 스타일 */
@@ -104,6 +105,7 @@ body.windows {
     border-radius: 5px;
     font-size: 1rem;
     text-align: center;
+    cursor: pointer;
 }
 
 

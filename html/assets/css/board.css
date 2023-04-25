@@ -59,6 +59,13 @@
     padding: 15px 5px;
     border-bottom: 1px solid var(--color__black);
 }
+.board__table table td:last-child td {
+    height: 500px;
+}
+.board__table table td a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
 .board__pages {
     margin-bottom: 100px;   
 }
@@ -89,6 +96,9 @@
 .board__View table th {
     padding: 15px;
     border-bottom: 1px solid var(--color__black);
+}
+.board__View table th {
+ 
 }
 .board__View table tr:last-child td {
     padding-bottom: 100px;
