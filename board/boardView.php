@@ -71,7 +71,6 @@
                             </tr> -->
 
 <?php
-
 if(isset($_GET['boardID'])) {
     $boardID = $_GET['boardID'];
     
@@ -102,8 +101,6 @@ if(isset($_GET['boardID'])) {
 }else {
     echo "<tr><td colspan='4'>게시글이 없습니다.</td></td>";
 }
-    
-
 ?>
 
                         </tbody>
@@ -111,8 +108,13 @@ if(isset($_GET['boardID'])) {
                 </div>
             </div>
             <div class="board__btn mb100">
-                <a href="boardModify.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3">수정하기</a>
-                <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3" onclick="confirm('정말 삭제할거니?', '')">삭제하기</a>
+                <?php if (isset($_GET['boardID'])) { ?>
+                    <a href="boardModify.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3">수정하기</a>
+                    <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3" onclick="return confirm('정말 삭제할거니?')">삭제하기</a>
+                <?php } else { ?>
+                    <a href="#" class="btnStyle3">수정하기</a>
+                    <a href="#" class="btnStyle3">삭제하기</a>
+                <?php } ?>
                 <a href="board.html" class="btnStyle3">목록보기</a>
             </div>
         </main>
