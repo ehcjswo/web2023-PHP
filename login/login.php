@@ -19,7 +19,7 @@
     <main id="main" class="container">
     <div class="login__inner">
             <h2>로그인</h2>
-            <p>로그인을 하시면 게시물 및 댓글 작성이 가능합니다. <br>회원가입을 하면 로그인이 가능합니다.<br>admin@admin.com/1234</p>
+            <p>로그인을 하시면 게시물 및 댓글 작성및 보기가 가능합니다. <br>회원가입을 하면 로그인이 가능합니다.<br>admin@admin.com/1234</p>
             <div class="login__form bmStyle btStyle">
                 <form action="loginSave.php" name="loginSave" method="post">
                     <fieldset>

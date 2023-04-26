@@ -83,6 +83,10 @@
     background-color: var(--color__black);
     color: var(--color__white);
 }
+.board__pages li:hover a {
+    background-color: var(--bg__gray2);
+    color: var(--color__black);
+}
 
 
 
@@ -104,6 +108,10 @@
     padding-bottom: 100px;
     
 }
+.board__View table tr:hover {
+    background-color: red;
+}
+
 
 .board__View table th {
     background-color: var(--bg__gray2);

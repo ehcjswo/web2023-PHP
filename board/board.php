@@ -84,7 +84,23 @@
                                 <td>100</td>
                             </tr> -->
 <?php
-    $sql = "SELECT b.boardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM board b JOIN members m ON(b.memberID = m.memberID) ORDER BY boardID DESC LIMIT 100";
+    //주소창에 (페이지=숫자)가 있을시 숫자를 정수로 변환, 없을시 (페이지=1) 을 기본으로
+    if(isset($_GET['page'])){
+        $page = (int) $_GET['page'];
+    } else {
+        $page = 1;
+    }
+
+    //페이지 LIMIT
+    $viewNum = 20;
+    $viewLimit = ($viewNum * $page) - $viewNum;
+
+    // 1~20  DESC LIMIT 0,   20 --> page1   (viewNum * 1) - viewNum
+    // 21~40 DESC LIMIT 20,  20 --> page2   (viewNum * 2) - viewNum
+    // 41~60 DESC LIMIT 40,  20 --> page3   (viewNum * 3) - viewNum
+    // 61~80 DESC LIMIT 60,  20 --> page4   (viewNum * 4) - viewNum
+
+    $sql = "SELECT b.boardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM board b JOIN members m ON(b.memberID = m.memberID) ORDER BY boardID DESC LIMIT {$viewLimit}, {$viewNum}";
     
     $result = $connect -> query($sql);
 
@@ -113,7 +129,55 @@
                 </div>
                 <div class="board__pages">
                     <ul>
-                        <li><a href="#">처음으로</a></li>
+<?php
+    // 게시글 총 갯수
+    $sql = "SELECT count(boardID) FROM board;";
+    $result = $connect -> query($sql);
+
+    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardTotalCount = $boardTotalCount['count(boardID)'];
+
+    
+    //총 페이지 갯수
+    $boardTotalCount = ceil($boardTotalCount/$viewNum);
+
+    //페이지 숫자 (플마 5까지)
+    $pageView = 5;
+    $startPage = $page - $pageView;
+    $endPage = $page + $pageView;
+
+    //처음 페이지 초기화
+    // if($startPage < 1) $startPage = 1;
+
+    //마지막 페이지 초기화
+    // if($endPage >= $boardTotalCount) $endPage = $boardTotalCount;
+
+    //처음으로, 이전페이지
+    if($boardTotalCount > 1 && $page <= $boardTotalCount){  //현재 페이지가 총 게시물 페이지를 넘어갈시 출력안됨
+        if($page != 1){
+            $prevPage = $page -1;
+            echo "<li><a href='board.php?page=1'>처음으로</a></li>";
+            echo "<li><a href='board.php?page={$prevPage}'>이전</a></li>";
+        }
+    }
+
+    //페이지
+    for($i=$startPage; $i<=$endPage; $i++){
+        if($i>0 && $i<=$boardTotalCount && $page <= $boardTotalCount){  //현재 페이지가 총 게시물 페이지를 넘어갈시 출력안됨
+            $active = "";
+            if($i == $page) $active = "active";
+            echo "<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
+        }
+    }
+
+    //다음페이지, 마지막페이지
+    if($page < $boardTotalCount){
+        $nextPage = $page + 1;
+        echo "<li><a href='board.php?page={$nextPage}'>다음</a></li>";
+        echo "<li><a href='board.php?page={$boardTotalCount}'>마지막으로</a></li>";
+    }  
+?>
+                        <!-- <li><a href="#">처음으로</a></li>
                         <li><a href="#">이전</a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
@@ -123,7 +187,7 @@
                         <li><a href="#">6</a></li>
                         <li><a href="#">7</a></li>
                         <li><a href="#">다음</a></li>
-                        <li><a href="#">마지막으로</a></li>
+                        <li><a href="#">마지막으로</a></li> -->
                     </ul>
                 </div>
             </div>
