@@ -108,9 +108,7 @@
     padding-bottom: 100px;
     
 }
-.board__View table tr:hover {
-    background-color: red;
-}
+
 
 
 .board__View table th {

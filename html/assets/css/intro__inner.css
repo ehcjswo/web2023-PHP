@@ -37,6 +37,9 @@
 .intro__inner.center .intro__text {
     text-align: center;
 } 
+.intro__inner.center .intro__text em {
+    color: red;
+}
 .intro__btn {
     margin-top: 30px;
     margin-bottom: 50px;

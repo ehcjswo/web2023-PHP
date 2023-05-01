@@ -2,6 +2,11 @@
     include "../connect/connect.php";
     include "../connect/session.php";
 
+    $sql = "SELECT count(boardID) FROM board;";
+    $result = $connect -> query($sql);
+
+    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardTotalCount = $boardTotalCount['count(boardID)'];
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +35,7 @@
                 </picture>
                 <h2>게시판</h2>
                 <p class="intro__text">
-                    웹 디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 개시판입니다.
+                    웹 디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 게시판입니다.
                     관련된 사항은 여기서 확인하세요!
                 </p>
             </div>
@@ -39,17 +44,17 @@
         <div class="board__inner">
                 <div class="board__search">
                     <div class="left">
-                        * 총 <em>1111</em>건의 게시물이 등록되어 있습니다.
+                        * 총 <em><?=$boardTotalCount?></em>건의 게시물이 등록되어 있습니다.
                     </div>
                     <div class="right">
-                        <form action="#" name="" method="post">
+                        <form action="boardSearch.php" name="boardSearch" method="get">
                             <fieldset>
                                 <legend class="blind">게시판 검색 영역</legend>
-                                <input type="search" placeholder="검색어를 입력하세요!">
-                                <select name="#" id="#">
+                                <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요!" required>
+                                <select name="searchOption" id="#searchOption">
                                     <option value="title">제목</option>
                                     <option value="content">내용</option>
-                                    <option value="neme">등록자</option>
+                                    <option value="name">등록자</option>
                                 </select>
                                 <button type="submit" class="btnStyle3 white">검색</button>
                                 <a href="boardWrite.php" class="btnStyle3">글쓰기</a>
@@ -131,11 +136,11 @@
                     <ul>
 <?php
     // 게시글 총 갯수
-    $sql = "SELECT count(boardID) FROM board;";
-    $result = $connect -> query($sql);
+    // $sql = "SELECT count(boardID) FROM board;";
+    // $result = $connect -> query($sql);
 
-    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
-    $boardTotalCount = $boardTotalCount['count(boardID)'];
+    // $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    // $boardTotalCount = $boardTotalCount['count(boardID)'];
 
     
     //총 페이지 갯수
@@ -196,5 +201,6 @@
 
     <?php include "../include/footer.php" ?>
     <!-- //footer -->
+
 </body>
 </html>

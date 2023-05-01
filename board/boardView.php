@@ -74,6 +74,10 @@
 <?php
 if(isset($_GET['boardID'])) {
     $boardID = $_GET['boardID'];
+
+    //보드 뷰 + 1
+    $sql = "UPDATE board SET boardView = boardView + 1 WHERE boardID = {$boardID}";
+    $connect -> query($sql);
     
     $sql = "SELECT b.boardContents, b.boardTitle, m.youName, b.regTime, b.boardView FROM board b JOIN members m ON(m.memberID = b.memberID) WHERE b.boardID = {$boardID}";
     
@@ -113,10 +117,10 @@ if(isset($_GET['boardID'])) {
                     <a href="boardModify.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3">수정하기</a>
                     <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3" onclick="return confirm('정말 삭제할거니?')">삭제하기</a>
                 <?php } else { ?>
-                    <a href="#" class="btnStyle3">수정하기</a>
-                    <a href="#" class="btnStyle3">삭제하기</a>
+                    <a href="boardModify.php" class="btnStyle3">수정하기</a>
+                    <a href="boardRemove.php" class="btnStyle3">삭제하기</a>
                 <?php } ?>
-                <a href="board.html" class="btnStyle3">목록보기</a>
+                <a href="board.php" class="btnStyle3">목록보기</a>
             </div>
         </main>
     <!-- main -->

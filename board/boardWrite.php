@@ -43,11 +43,11 @@
                             <legend class="blind">게시글 작성하기</legend>
                             <div>
                                 <label for="board__title">제목</label>
-                                <input type="text" id="board__title" name="boardTitle" class="inputStyle">
+                                <input type="text" id="board__title" name="boardTitle" class="inputStyle" required>
                             </div>
                             <div>
                                 <label for="boardContents">내용</label>
-                                <textarea name="boardContents" id="boardContents" class="inputStyle" rows="20"></textarea>
+                                <textarea name="boardContents" id="boardContents" class="inputStyle" rows="20" required></textarea>
                             </div>
                             <button type="submit" class="btnStyle3">글쓰기</button>
                         </fieldset>
