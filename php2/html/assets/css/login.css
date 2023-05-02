@@ -48,13 +48,29 @@
     font-size: 18px;
     color: #7e7e7e;
 }
+.find3 {
+    display: flex;
+    color: #7e7e7e;
+    justify-content: space-between;
+    padding: 20px 80px 3px 80px;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+}
 .find {
     display: flex;
     justify-content: space-between;
-    padding: 10px 80px 0px 80px;
+    padding: 20px 135px 3px 137px;
     margin-bottom: 70px;
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+    padding-bottom: 20px;
 }
 .find a {
+    
+    color: #7e7e7e;
+    position: relative;
+}
+.find3 a {
     
     color: #7e7e7e;
     position: relative;
@@ -65,6 +81,40 @@
     left: -12px;
 }
 .find a:nth-child(3):before {
+    position: absolute;
+    content: "|";
+    left: -12px;
+}
+.find3 a:nth-child(2):before {
+    position: absolute;
+    content: "|";
+    left: -12px;
+}
+.find3 a:nth-child(3):before {
+    position: absolute;
+    content: "|";
+    left: -12px;
+}
+.passwordfind {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 141px 3px 143px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.passwordfind a {
+    
+    color: #7e7e7e;
+    position: relative;
+}
+.passwordfind a:nth-child(2):before {
+    position: absolute;
+    content: "|";
+    left: -12px;
+}
+.passwordfind a:nth-child(3):before {
     position: absolute;
     content: "|";
     left: -12px;
