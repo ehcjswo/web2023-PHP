@@ -9,9 +9,6 @@
 /* 레이아웃 */
 @import "layout.css";
 
-/* intro */
-@import "intro__inner.css";
-
 /* join */
 @import "join.css";
 @import "joinEnd.css";
@@ -19,8 +16,12 @@
 /* login */
 @import "login.css";
 
-/* board */
-@import "board.css";
-
 /* tos */
 @import "tos.css";
+/* main */
+@import "main.css";
+
+/* mainheader */
+@import "mainheader.css";
+/* footer */
+@import "footer.css";

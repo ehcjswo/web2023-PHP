@@ -7,7 +7,7 @@
 /* header__inner */
 .header__inner {
     position: relative;
-    /* width: 100%; */
+    width: 100%;
     box-sizing: border-box;
     height: 80px;
     /* background-color: #fff; */
@@ -106,18 +106,6 @@
     background-color: var(--color__black);
     color: var(--color__white);
 }
-
-/* footer__inner */
-.footer__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 100px 0; */
-    font-size: 14px;
-    color: #666;
-    padding-top: 5px;
-}
-
 /* media */
 @media (max-width: 600px){
     .header__inner .left{

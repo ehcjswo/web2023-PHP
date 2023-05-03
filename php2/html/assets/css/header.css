@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    /* background-color: #ccc; */
+}
+.kategorie {
+    width: 330px;
+    height: 80px;
+    position: relative;
+    /* background-color: #555; */
+}
+.kategorie a {
+    background-image: url(/php2/html/assets/img/kategorie.png);
+    position: absolute;
+    width: 44px;
+    height: 24px;
+    bottom: 25px;
+    left: 140px;
+}
+.logo {
+    width: 1260px;
+    /* background-color: #fff; */
+}
+.logo h1 a {
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: 40px !important;
+    /* background-color: #fff; */
+}
+.user {
+    width: 330px;
+    height: 80px;
+    /* background-color: #555; */
+    position: relative;
+}
+.user a{
+    background-image: url(/php2/html/assets/img/user.png);
+    background-size: cover;
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    bottom: 25px;
+    left: 150px;
+}
