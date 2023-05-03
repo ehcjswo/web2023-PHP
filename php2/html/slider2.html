@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <style>
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot');
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot');
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot');
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            font-weight: 800;
+            font-style: normal;
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot');
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            font-weight: 900;
+            font-style: normal;
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot');
+            src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
+                url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
+            font-display: swap;
+        } 
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'NanumSquareNeo';
+        }
+        #wrap {
+            /* width: 1920px;
+            height: 1270px; */
+            
+        }
+        img {
+            width: 100%;
+        }
+        #wrap p {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        .slider__inner {
+            width: 100%;
+            height: 635px;
+            margin: 0 auto;
+    
+        }
+        .slider {
+            margin: 0 auto;
+            width: 600px;
+            height: 500px;
+            /* background-color: #c08c8c; */
+            display: flex;
+            /* justify-content: space-between; */
+            /* overflow: hidden; */
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .slider div {
+            width: 30%;
+            height: 30%;
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid #000;
+            border-radius: 30px;
+            margin: 30px;
+        }
+
+
+        .swiper-button-next {
+            left: 70%
+        }
+        .swiper-button-prev {
+            left: 28%
+        }
+        a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 45px;
+            height: 56px;
+            /* background-color: #fff; */
+            background-image: url(assets/img/icon_main1.svg);
+            background-size: 500px;
+        }
+        .swiper-button-next {
+            background-position: -45px 0;
+        }
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            font-size: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="slider__inner">
+            <p>유통기한이 궁금한 화장품을 선택해보세요!</p>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div>이미지1</div>
+                            <div>이미지2</div>
+                            <div>이미지3</div>
+                            <div>이미지4</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div>이미지7</div>
+                            <div>이미지8</div>
+                            <div>이미지9</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div id="slider__bottom">
+            <img src="assets/img/slider02_01.png" alt="슬라이드밑사진">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        
+        // const btnStart = document.querySelector(".swiper-button-play");
+        // const btnStop = document.querySelector(".swiper-button-stop");
+
+        // btnStart.style.display = "none";
+
+        // btnStart.addEventListener("click", () => {
+        //     swiper.autoplay.start();
+        //     btnStart.style.display = "none";
+        //     btnStop.style.display = "block";
+        // });
+
+        // btnStop.addEventListener("click", () => {
+        //     swiper.autoplay.stop();
+        //     btnStart.style.display = "block";
+        //     btnStop.style.display = "none";
+        // });
+        
+    </script>
+</body>
+</html>
