@@ -26,7 +26,7 @@
     font-size: 30px;
 }
 .fot {
-    width: 80%;
+    width: 100%;
     text-align: right;
 }
 .fot .nav li {
@@ -43,5 +43,5 @@
     /* background-color: #ccc; */
 }
 .copyright {
-    margin-top: 60px;
+    margin-top: 45px;
 }

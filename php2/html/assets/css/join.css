@@ -1,10 +1,14 @@
+/* join title */
+.join__title{
+    
+}
 /* join__form */
 .join__inner {
     /* padding: 5% 0; */
     
 }
 .join__inner h2 {
-    padding: 70px 0 20px 0px;
+    padding: 40px 0 20px 0px;
     font-size: 30px;
     text-align: center;
     font-weight: 500;
@@ -26,7 +30,7 @@
     height: 40px;
     margin-bottom: 25px;
     background-color: #fff;
-    border: 1px solid #7e7e7e;
+    border: 1px solid #F06171;
     border-radius: 5px;
 }
 .join__form div label {
