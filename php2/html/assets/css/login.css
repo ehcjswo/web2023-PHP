@@ -36,8 +36,8 @@
     height: 80px;
     /* background-color: #666; */
     align-items: center;
-    border-top: 1px solid #d4d4d4;
-    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #F06171;
+    border-bottom: 1px solid #F06171;
     margin-bottom: 20px;  
 }
 .kakao::before {
@@ -61,8 +61,8 @@
     justify-content: space-between;
     padding: 20px 135px 3px 137px;
     margin-bottom: 70px;
-    border-bottom: 1px solid #d4d4d4;
-    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #F06171;
+    border-top: 1px solid #F06171;
     padding-bottom: 20px;
 }
 .find a {
@@ -100,8 +100,8 @@
     justify-content: space-between;
     padding: 20px 141px 3px 143px;
     margin-bottom: 70px;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #F06171;
+    border-top: 1px solid #F06171;
     padding-bottom: 20px;
 }
 .passwordfind a {

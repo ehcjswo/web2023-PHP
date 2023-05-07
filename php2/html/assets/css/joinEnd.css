@@ -9,10 +9,11 @@
 }
 .joinEnd__form p {
     text-align: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #F06171
+    ;
     padding: 10px;
     margin-bottom: 40px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #F06171;
     font-size: 16px;
     font-weight: 100;
 }
